@@ -1,6 +1,6 @@
 let numberdice = 0
 input.onGesture(Gesture.Shake, function () {
-    numberdice = randint(1, 3)
+    numberdice = randint(1, 6)
     if (numberdice == 1) {
         basic.showLeds(`
             . . # . .
@@ -17,11 +17,35 @@ input.onGesture(Gesture.Shake, function () {
             . # # . .
             # # # # #
             `)
-    } else {
+    } else if (numberdice == 3) {
         basic.showLeds(`
             . # # . .
             # . . # .
             . . # . .
+            # . . # .
+            . # # . .
+            `)
+    } else if (numberdice == 4) {
+        basic.showLeds(`
+            . . . # .
+            . . # # .
+            . # . # .
+            # # # # #
+            . . . # .
+            `)
+    } else if (numberdice == 5) {
+        basic.showLeds(`
+            . # # # #
+            . # . . .
+            . # # # .
+            . . . . #
+            . # # # .
+            `)
+    } else {
+        basic.showLeds(`
+            . # # # .
+            # . . . .
+            # # # . .
             # . . # .
             . # # . .
             `)
